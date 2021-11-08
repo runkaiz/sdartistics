@@ -9,7 +9,7 @@ class ColumnNotFoundException implements Exception {
 
 /// An exception for a file not found
 class FileNotFoundException implements Exception {
-  /// Default construtor
+  /// Default constructor
   FileNotFoundException(this.message);
 
   /// The error message
