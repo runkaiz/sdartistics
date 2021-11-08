@@ -284,6 +284,22 @@ class DataFrame {
     return n;
   }
 
+  /// Count missing data in a table
+  DataFrame countMissingData_({List<Object?> nullValues = const [null, 'null', 'nan', 'NULL', 'N/A']}) {
+    final DataFrame result = copy_();
+    result.limit(0, startIndex: 0);
+    final Map<String, Object> countRow = {};
+
+    for (String name in columnsNames) {
+      int c = countNulls_(name);
+      countRow[name] = c;
+    }
+
+    result.addRow(countRow);
+
+    return result;
+  }
+
   // ********* insert operations **********
 
   /// Add a row to the data
