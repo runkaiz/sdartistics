@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the DataFrame class from the sdartistics library, for the Dart programming language.">
+  <title>DataFrame class - sdartistics library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">sdartistics</a></li>
+    <li><a href="../sdartistics/sdartistics-library.html">sdartistics</a></li>
+    <li class="self-crumb">DataFrame class</li>
+  </ol>
+  <div class="self-name">DataFrame</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-class">DataFrame</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>The main dataframe class</p>
+</section>
+
+
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="DataFrame" class="callable">
+          <span class="name"><a href="../sdartistics/DataFrame/DataFrame.html">DataFrame</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          Default constructor 
+        </dd>
+        <dt id="DataFrame.fromRows" class="callable">
+          <span class="name"><a href="../sdartistics/DataFrame/DataFrame.fromRows.html">DataFrame.fromRows</a></span><span class="signature">(<span class="parameter" id="fromRows-param-rows"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object-class.html">Object</a>?</span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">rows</span></span>)</span>
+        </dt>
+        <dd>
+          Build a dataframe from a list of rows 
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="columns" class="property">
+  <span class="name"><a href="../sdartistics/DataFrame/columns.html">columns</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../sdartistics/DataFrameColumn-class.html">DataFrameColumn</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The dataframe columns 
+  <div class="features">read-only</div>
+
+</dd>
+
+        <dt id="columnsIndices" class="property">
+  <span class="name"><a href="../sdartistics/DataFrame/columnsIndices.html">columnsIndices</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The dataframe columns indices 
+  <div class="features">read-only</div>
+
+</dd>
+
+        <dt id="columnsNames" class="property">
+  <span class="name"><a href="../sdartistics/DataFrame/columnsNames.html">columnsNames</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The dataframe columns names 
+  <div class="features">read-only</div>
+
+</dd>
+
+        <dt id="dataset" class="property">
+  <span class="name"><a href="../sdartistics/DataFrame/dataset.html">dataset</a></span>
+  <span class="signature">&#8596; <a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object-class.html">Object</a>?</span>&gt;</span></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  An iterable of rows of data where each row is a list containing null
+values for any unspecified columns. 
+  <div class="features">read / write</div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object. <a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/hashCode.html">[...]</a>
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+        <dt id="length" class="property">
+  <span class="name"><a href="../sdartistics/DataFrame/length.html">length</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  Number of rows og the data 
+  <div class="features">read-only</div>
+
+</dd>
+
+        <dt id="rows" class="property">
+  <span class="name"><a href="../sdartistics/DataFrame/rows.html">rows</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object-class.html">Object</a></span>&gt;</span></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  An iterable of rows data 
+  <div class="features">read-only</div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object. 
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="addRecords" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/addRecords.html">addRecords</a></span><span class="signature">(<wbr><span class="parameter" id="addRecords-param-records"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object-class.html">Object</a></span>&gt;</span></span> <span class="parameter-name">records</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Add a line of records to the data 
+  
+
+</dd>
+
+        <dt id="addRow" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/addRow.html">addRow</a></span><span class="signature">(<wbr><span class="parameter" id="addRow-param-row"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object-class.html">Object</a></span>&gt;</span></span> <span class="parameter-name">row</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Add a row to the data 
+  
+
+</dd>
+
+        <dt id="colRecords" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/colRecords.html">colRecords</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="colRecords-param-colName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">colName</span>, </span><span class="parameter" id="colRecords-param-offset">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">offset</span>, </span><span class="parameter" id="colRecords-param-limit"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">limit</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get typed records for a column 
+  
+
+</dd>
+
+        <dt id="cols" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/cols.html">cols</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Print columns info 
+  
+
+</dd>
+
+        <dt id="columnIndex" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/columnIndex.html">columnIndex</a></span><span class="signature">(<wbr><span class="parameter" id="columnIndex-param-colName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">colName</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get the index of a column 
+  
+
+</dd>
+
+        <dt id="copy_" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/copy_.html">copy_</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../sdartistics/DataFrame-class.html">DataFrame</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get a copy of a dataframe 
+  
+
+</dd>
+
+        <dt id="countMissingData_" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/countMissingData_.html">countMissingData_</a></span><span class="signature">(<wbr><span class="parameter" id="countMissingData_-param-nullValues">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object-class.html">Object</a>?</span>&gt;</span></span> <span class="parameter-name">nullValues</span> = <span class="default-value">const [null, &#39;null&#39;, &#39;nan&#39;, &#39;NULL&#39;, &#39;N&#47;A&#39;]</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="../sdartistics/DataFrame-class.html">DataFrame</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Count missing data in a table 
+  
+
+</dd>
+
+        <dt id="countNulls_" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/countNulls_.html">countNulls_</a></span><span class="signature">(<wbr><span class="parameter" id="countNulls_-param-colName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">colName</span>, </span><span class="parameter" id="countNulls_-param-nullValues">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object-class.html">Object</a>?</span>&gt;</span></span> <span class="parameter-name">nullValues</span> = <span class="default-value">const [null, &#39;null&#39;, &#39;nan&#39;, &#39;NULL&#39;, &#39;N&#47;A&#39;]</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Count null values <a href="../sdartistics/DataFrame/countNulls_.html">[...]</a>
+  
+
+</dd>
+
+        <dt id="countZeros_" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/countZeros_.html">countZeros_</a></span><span class="signature">(<wbr><span class="parameter" id="countZeros_-param-colName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">colName</span>, </span><span class="parameter" id="countZeros_-param-zeroValues">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object-class.html">Object</a></span>&gt;</span></span> <span class="parameter-name">zeroValues</span> = <span class="default-value">const &lt;Object&gt;[0]</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Count zero values <a href="../sdartistics/DataFrame/countZeros_.html">[...]</a>
+  
+
+</dd>
+
+        <dt id="head" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/head.html">head</a></span><span class="signature">(<wbr><span class="parameter" id="head-param-lines">[<span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">lines</span> = <span class="default-value">5</span>]</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Print sample data 
+  
+
+</dd>
+
+        <dt id="limit" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/limit.html">limit</a></span><span class="signature">(<wbr><span class="parameter" id="limit-param-max"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">max</span>, </span><span class="parameter" id="limit-param-startIndex">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">startIndex</span> = <span class="default-value">0</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Limit the data 
+  
+
+</dd>
+
+        <dt id="limit_" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/limit_.html">limit_</a></span><span class="signature">(<wbr><span class="parameter" id="limit_-param-max"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">max</span>, </span><span class="parameter" id="limit_-param-startIndex">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">startIndex</span> = <span class="default-value">0</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="../sdartistics/DataFrame-class.html">DataFrame</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get a new dataframe with limited data 
+  
+
+</dd>
+
+        <dt id="max_" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/max_.html">max_</a></span><span class="signature">(<wbr><span class="parameter" id="max_-param-colName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">colName</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/double-class.html">double</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get the max value of a column 
+  
+
+</dd>
+
+        <dt id="mean_" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/mean_.html">mean_</a></span><span class="signature">(<wbr><span class="parameter" id="mean_-param-colName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">colName</span>, </span><span class="parameter" id="mean_-param-nullAggregation">{<span>required</span> <span class="type-annotation"><a href="../sdartistics/NullMeanBehavior.html">NullMeanBehavior</a></span> <span class="parameter-name">nullAggregation</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/double-class.html">double</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Mean of a column 
+  
+
+</dd>
+
+        <dt id="min_" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/min_.html">min_</a></span><span class="signature">(<wbr><span class="parameter" id="min_-param-colName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">colName</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/double-class.html">double</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get the min value of a column 
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed. <a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/noSuchMethod.html">[...]</a>
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="removeFirstRow" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/removeFirstRow.html">removeFirstRow</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Remove the first row 
+  
+
+</dd>
+
+        <dt id="removeLastRow" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/removeLastRow.html">removeLastRow</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Remove the last row 
+  
+
+</dd>
+
+        <dt id="removeRowAt" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/removeRowAt.html">removeRowAt</a></span><span class="signature">(<wbr><span class="parameter" id="removeRowAt-param-index"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">index</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Remove a row at a given index position 
+  
+
+</dd>
+
+        <dt id="setColumns" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/setColumns.html">setColumns</a></span><span class="signature">(<wbr><span class="parameter" id="setColumns-param-cols"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../sdartistics/DataFrameColumn-class.html">DataFrameColumn</a></span>&gt;</span></span> <span class="parameter-name">cols</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Set the dataframe columns <a href="../sdartistics/DataFrame/setColumns.html">[...]</a>
+  
+
+</dd>
+
+        <dt id="show" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/show.html">show</a></span><span class="signature">(<wbr><span class="parameter" id="show-param-lines">[<span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">lines</span> = <span class="default-value">5</span>]</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Print info and sample data 
+  
+
+</dd>
+
+        <dt id="sort" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/sort.html">sort</a></span><span class="signature">(<wbr><span class="parameter" id="sort-param-colName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">colName</span>, </span><span class="parameter" id="sort-param-nullBehavior">{<span class="type-annotation"><a href="../sdartistics/NullSortBehavior.html">NullSortBehavior</a>?</span> <span class="parameter-name">nullBehavior</span>, </span><span class="parameter" id="sort-param-compare"><span class="type-annotation"><a href="../sdartistics/CompareFunction.html">CompareFunction</a>?</span> <span class="parameter-name">compare</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  In-place sort this dataframe by a column. <a href="../sdartistics/DataFrame/sort.html">[...]</a>
+  
+
+</dd>
+
+        <dt id="sort_" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/sort_.html">sort_</a></span><span class="signature">(<wbr><span class="parameter" id="sort_-param-colName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">colName</span>, </span><span class="parameter" id="sort_-param-nullBehavior">{<span class="type-annotation"><a href="../sdartistics/NullSortBehavior.html">NullSortBehavior</a>?</span> <span class="parameter-name">nullBehavior</span>, </span><span class="parameter" id="sort_-param-compare"><span class="type-annotation"><a href="../sdartistics/CompareFunction.html">CompareFunction</a>?</span> <span class="parameter-name">compare</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="../sdartistics/DataFrame-class.html">DataFrame</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get a new dataframe sorted by a column. <a href="../sdartistics/DataFrame/sort_.html">[...]</a>
+  
+
+</dd>
+
+        <dt id="subset" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/subset.html">subset</a></span><span class="signature">(<wbr><span class="parameter" id="subset-param-startIndex"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">startIndex</span>, </span><span class="parameter" id="subset-param-endIndex"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">endIndex</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object-class.html">Object</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Limit the dataframe to a subset of data 
+  
+
+</dd>
+
+        <dt id="subset_" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/subset_.html">subset_</a></span><span class="signature">(<wbr><span class="parameter" id="subset_-param-startIndex"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">startIndex</span>, </span><span class="parameter" id="subset_-param-endIndex"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">endIndex</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../sdartistics/DataFrame-class.html">DataFrame</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get a new dataframe with a subset of data 
+  
+
+</dd>
+
+        <dt id="sum_" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/sum_.html">sum_</a></span><span class="signature">(<wbr><span class="parameter" id="sum_-param-colName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">colName</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/double-class.html">double</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sum of a column 
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object. <a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/toString.html">[...]</a>
+  <div class="features">inherited</div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator. <a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/operator_equals.html">[...]</a>
+  <div class="features">inherited</div>
+
+</dd>
+
+      </dl>
+    </section>
+
+
+    <section class="summary offset-anchor" id="static-methods">
+      <h2>Static Methods</h2>
+      <dl class="callables">
+        <dt id="fromCharStream" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/fromCharStream.html">fromCharStream</a></span><span class="signature">(<wbr><span class="parameter" id="fromCharStream-param-charStream"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">charStream</span>, </span><span class="parameter" id="fromCharStream-param-dateFormat">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dateFormat</span>, </span><span class="parameter" id="fromCharStream-param-timestampCol"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">timestampCol</span>, </span><span class="parameter" id="fromCharStream-param-timestampFormat"><span class="type-annotation"><a href="../sdartistics/TimestampFormat.html">TimestampFormat</a></span> <span class="parameter-name">timestampFormat</span> = <span class="default-value">TimestampFormat.milliseconds</span>, </span><span class="parameter" id="fromCharStream-param-verbose"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">verbose</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../sdartistics/DataFrame-class.html">DataFrame</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Build a dataframe from a utf8 encoded stream of comma separated characters. <a href="../sdartistics/DataFrame/fromCharStream.html">[...]</a>
+  
+
+</dd>
+
+        <dt id="fromCsv" class="callable">
+  <span class="name"><a href="../sdartistics/DataFrame/fromCsv.html">fromCsv</a></span><span class="signature">(<wbr><span class="parameter" id="fromCsv-param-path"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span>, </span><span class="parameter" id="fromCsv-param-dateFormat">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dateFormat</span>, </span><span class="parameter" id="fromCsv-param-timestampCol"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">timestampCol</span>, </span><span class="parameter" id="fromCsv-param-timestampFormat"><span class="type-annotation"><a href="../sdartistics/TimestampFormat.html">TimestampFormat</a></span> <span class="parameter-name">timestampFormat</span> = <span class="default-value">TimestampFormat.milliseconds</span>, </span><span class="parameter" id="fromCsv-param-verbose"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">verbose</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.14.4/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../sdartistics/DataFrame-class.html">DataFrame</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Build a dataframe from a csv file 
+  
+
+</dd>
+
+      </dl>
+    </section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">sdartistics</a></li>
+  <li><a href="../sdartistics/sdartistics-library.html">sdartistics</a></li>
+  <li class="self-crumb">DataFrame class</li>
+</ol>
+
+
+    <h5>sdartistics library</h5>
+    <ol>
+  <li class="section-title"><a href="../sdartistics/sdartistics-library.html#classes">Classes</a></li>
+  <li><a href="../sdartistics/Awesome-class.html">Awesome</a></li>
+  <li><a href="../sdartistics/DataFrame-class.html">DataFrame</a></li>
+  <li><a href="../sdartistics/DataFrameColumn-class.html">DataFrameColumn</a></li>
+
+
+
+
+
+
+  <li class="section-title"><a href="../sdartistics/sdartistics-library.html#enums">Enums</a></li>
+  <li><a href="../sdartistics/NullMeanBehavior.html">NullMeanBehavior</a></li>
+  <li><a href="../sdartistics/NullSortBehavior.html">NullSortBehavior</a></li>
+  <li><a href="../sdartistics/TimestampFormat.html">TimestampFormat</a></li>
+
+  <li class="section-title"><a href="../sdartistics/sdartistics-library.html#typedefs">Typedefs</a></li>
+  <li><a href="../sdartistics/CompareFunction.html">CompareFunction</a></li>
+
+  <li class="section-title"><a href="../sdartistics/sdartistics-library.html#exceptions">Exceptions</a></li>
+  <li><a href="../sdartistics/ColumnNotFoundException-class.html">ColumnNotFoundException</a></li>
+  <li><a href="../sdartistics/FileNotFoundException-class.html">FileNotFoundException</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+    <li class="section-title"><a href="../sdartistics/DataFrame-class.html#constructors">Constructors</a></li>
+    <li><a href="../sdartistics/DataFrame/DataFrame.html">DataFrame</a></li>
+    <li><a href="../sdartistics/DataFrame/DataFrame.fromRows.html">fromRows</a></li>
+
+
+    <li class="section-title">
+      <a href="../sdartistics/DataFrame-class.html#instance-properties">Properties</a>
+    </li>
+    <li><a href="../sdartistics/DataFrame/columns.html">columns</a></li>
+    <li><a href="../sdartistics/DataFrame/columnsIndices.html">columnsIndices</a></li>
+    <li><a href="../sdartistics/DataFrame/columnsNames.html">columnsNames</a></li>
+    <li><a href="../sdartistics/DataFrame/dataset.html">dataset</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li><a href="../sdartistics/DataFrame/length.html">length</a></li>
+    <li><a href="../sdartistics/DataFrame/rows.html">rows</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+    <li class="section-title"><a href="../sdartistics/DataFrame-class.html#instance-methods">Methods</a></li>
+    <li><a href="../sdartistics/DataFrame/addRecords.html">addRecords</a></li>
+    <li><a href="../sdartistics/DataFrame/addRow.html">addRow</a></li>
+    <li><a href="../sdartistics/DataFrame/colRecords.html">colRecords</a></li>
+    <li><a href="../sdartistics/DataFrame/cols.html">cols</a></li>
+    <li><a href="../sdartistics/DataFrame/columnIndex.html">columnIndex</a></li>
+    <li><a href="../sdartistics/DataFrame/copy_.html">copy_</a></li>
+    <li><a href="../sdartistics/DataFrame/countMissingData_.html">countMissingData_</a></li>
+    <li><a href="../sdartistics/DataFrame/countNulls_.html">countNulls_</a></li>
+    <li><a href="../sdartistics/DataFrame/countZeros_.html">countZeros_</a></li>
+    <li><a href="../sdartistics/DataFrame/head.html">head</a></li>
+    <li><a href="../sdartistics/DataFrame/limit.html">limit</a></li>
+    <li><a href="../sdartistics/DataFrame/limit_.html">limit_</a></li>
+    <li><a href="../sdartistics/DataFrame/max_.html">max_</a></li>
+    <li><a href="../sdartistics/DataFrame/mean_.html">mean_</a></li>
+    <li><a href="../sdartistics/DataFrame/min_.html">min_</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li><a href="../sdartistics/DataFrame/removeFirstRow.html">removeFirstRow</a></li>
+    <li><a href="../sdartistics/DataFrame/removeLastRow.html">removeLastRow</a></li>
+    <li><a href="../sdartistics/DataFrame/removeRowAt.html">removeRowAt</a></li>
+    <li><a href="../sdartistics/DataFrame/setColumns.html">setColumns</a></li>
+    <li><a href="../sdartistics/DataFrame/show.html">show</a></li>
+    <li><a href="../sdartistics/DataFrame/sort.html">sort</a></li>
+    <li><a href="../sdartistics/DataFrame/sort_.html">sort_</a></li>
+    <li><a href="../sdartistics/DataFrame/subset.html">subset</a></li>
+    <li><a href="../sdartistics/DataFrame/subset_.html">subset_</a></li>
+    <li><a href="../sdartistics/DataFrame/sum_.html">sum_</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/toString.html">toString</a></li>
+
+    <li class="section-title inherited"><a href="../sdartistics/DataFrame-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+    <li class="section-title"><a href="../sdartistics/DataFrame-class.html#static-methods">Static methods</a></li>
+    <li><a href="../sdartistics/DataFrame/fromCharStream.html">fromCharStream</a></li>
+    <li><a href="../sdartistics/DataFrame/fromCsv.html">fromCsv</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    sdartistics
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+
