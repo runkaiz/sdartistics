@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import '../sdartistics.dart';
+import '../df.dart';
 
 /// A class to manage the data inside the [DataFrame]
 class DataMatrix {
