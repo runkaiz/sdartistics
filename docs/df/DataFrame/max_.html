@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the max_ method from the DataFrame class, for the Dart programming language.">
+  <title>max_ method - DataFrame class - df library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">sdartistics</a></li>
+    <li><a href="../../df/df-library.html">df</a></li>
+    <li><a href="../../df/DataFrame-class.html">DataFrame</a></li>
+    <li class="self-crumb">max_ method</li>
+  </ol>
+  <div class="self-name">max_</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-method">max_</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.dart.dev/stable/2.14.4/dart-core/double-class.html">double</a></span>
+<span class="name ">max_</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="max_-param-colName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">colName</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Get the max value of a column</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">double max_(String colName) =&gt; _matrix.maxCol(_indexForColumn(colName));</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../../index.html">sdartistics</a></li>
+  <li><a href="../../df/df-library.html">df</a></li>
+  <li><a href="../../df/DataFrame-class.html">DataFrame</a></li>
+  <li class="self-crumb">max_ method</li>
+</ol>
+
+
+    <h5>DataFrame class</h5>
+    <ol>
+
+    <li class="section-title"><a href="../../df/DataFrame-class.html#constructors">Constructors</a></li>
+    <li><a href="../../df/DataFrame/DataFrame.html">DataFrame</a></li>
+    <li><a href="../../df/DataFrame/DataFrame.fromRows.html">fromRows</a></li>
+
+
+    <li class="section-title">
+      <a href="../../df/DataFrame-class.html#instance-properties">Properties</a>
+    </li>
+    <li><a href="../../df/DataFrame/columns.html">columns</a></li>
+    <li><a href="../../df/DataFrame/columnsIndices.html">columnsIndices</a></li>
+    <li><a href="../../df/DataFrame/columnsNames.html">columnsNames</a></li>
+    <li><a href="../../df/DataFrame/dataset.html">dataset</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li><a href="../../df/DataFrame/length.html">length</a></li>
+    <li><a href="../../df/DataFrame/rows.html">rows</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+    <li class="section-title"><a href="../../df/DataFrame-class.html#instance-methods">Methods</a></li>
+    <li><a href="../../df/DataFrame/addRecords.html">addRecords</a></li>
+    <li><a href="../../df/DataFrame/addRow.html">addRow</a></li>
+    <li><a href="../../df/DataFrame/colRecords.html">colRecords</a></li>
+    <li><a href="../../df/DataFrame/cols.html">cols</a></li>
+    <li><a href="../../df/DataFrame/columnIndex.html">columnIndex</a></li>
+    <li><a href="../../df/DataFrame/copy_.html">copy_</a></li>
+    <li><a href="../../df/DataFrame/countMissingData_.html">countMissingData_</a></li>
+    <li><a href="../../df/DataFrame/countNulls_.html">countNulls_</a></li>
+    <li><a href="../../df/DataFrame/countZeros_.html">countZeros_</a></li>
+    <li><a href="../../df/DataFrame/head.html">head</a></li>
+    <li><a href="../../df/DataFrame/limit.html">limit</a></li>
+    <li><a href="../../df/DataFrame/limit_.html">limit_</a></li>
+    <li><a href="../../df/DataFrame/max_.html">max_</a></li>
+    <li><a href="../../df/DataFrame/mean_.html">mean_</a></li>
+    <li><a href="../../df/DataFrame/min_.html">min_</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li><a href="../../df/DataFrame/removeFirstRow.html">removeFirstRow</a></li>
+    <li><a href="../../df/DataFrame/removeLastRow.html">removeLastRow</a></li>
+    <li><a href="../../df/DataFrame/removeRowAt.html">removeRowAt</a></li>
+    <li><a href="../../df/DataFrame/setColumns.html">setColumns</a></li>
+    <li><a href="../../df/DataFrame/show.html">show</a></li>
+    <li><a href="../../df/DataFrame/sort.html">sort</a></li>
+    <li><a href="../../df/DataFrame/sort_.html">sort_</a></li>
+    <li><a href="../../df/DataFrame/subset.html">subset</a></li>
+    <li><a href="../../df/DataFrame/subset_.html">subset_</a></li>
+    <li><a href="../../df/DataFrame/sum_.html">sum_</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/toString.html">toString</a></li>
+
+    <li class="section-title inherited"><a href="../../df/DataFrame-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+    <li class="section-title"><a href="../../df/DataFrame-class.html#static-methods">Static methods</a></li>
+    <li><a href="../../df/DataFrame/fromCharStream.html">fromCharStream</a></li>
+    <li><a href="../../df/DataFrame/fromCsv.html">fromCsv</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    sdartistics
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+
