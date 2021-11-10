@@ -25,11 +25,13 @@ start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+See `/example` folder for more details. 
 
 ```dart
-const like = 'sample';
+Future<void> main() async {
+  final df = await Table.fromCsv('datasets/incomplete.csv');
+  df.print();
+}
 ```
 
 ## Additional information

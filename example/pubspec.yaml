@@ -1,5 +1,6 @@
 name: sdartistics_example
 version: 0.0.1
+publish_to: none
 
 environment:
   sdk: '>=2.14.4 <3.0.0'

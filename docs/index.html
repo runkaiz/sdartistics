@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="generator" content="made with love by dartdoc 4.1.0">
+  <meta name="generator" content="made with love by dartdoc 2.0.0">
   <meta name="description" content="sdartistics API docs, for the Dart programming language.">
   <title>sdartistics - Dart API docs</title>
 
@@ -44,19 +44,7 @@
   <div id="dartdoc-main-content" class="main-content">
       
 <section class="desc markdown">
-  <!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-<p>TODO: Put a short description of the package here that helps potential users
+  <p>TODO: Put a short description of the package here that helps potential users
 know whether this package might be useful for them.</p>
 <h2 id="features">Features</h2>
 <p>TODO: List what your package can do. Maybe include images, gifs, or videos.</p>
@@ -64,9 +52,11 @@ know whether this package might be useful for them.</p>
 <p>TODO: List prerequisites and provide or point to information on how to
 start using the package.</p>
 <h2 id="usage">Usage</h2>
-<p>TODO: Include short and useful examples for package users. Add longer examples
-to <code>/example</code> folder.</p>
-<pre class="language-dart"><code class="language-dart">const like = 'sample';
+<p>See <code>/example</code> folder for more details.</p>
+<pre class="language-dart"><code class="language-dart">Future&lt;void&gt; main() async {
+  final df = await Table.fromCsv('datasets/incomplete.csv');
+  df.print();
+}
 </code></pre>
 <h2 id="additional-information">Additional information</h2>
 <p>Some commands to run during development:</p>
@@ -79,13 +69,6 @@ to <code>/example</code> folder.</p>
       <section class="summary">
           <h2>Libraries</h2>
         <dl>
-          <dt id="df">
-  <span class="name"><a href="df/df-library.html">df</a></span> 
-
-</dt>
-<dd> 
-</dd>
-
           <dt id="sdartistics">
   <span class="name"><a href="sdartistics/sdartistics-library.html">sdartistics</a></span> 
 
@@ -113,7 +96,6 @@ to <code>/example</code> folder.</p>
     <h5 class="hidden-xs"><span class="package-name">sdartistics</span> <span class="package-kind">package</span></h5>
     <ol>
       <li class="section-title">Libraries</li>
-      <li><a href="df/df-library.html">df</a></li>
       <li><a href="sdartistics/sdartistics-library.html">sdartistics</a></li>
 </ol>
 
