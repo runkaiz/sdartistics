@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the fromCsv method from the Table class, for the Dart programming language.">
-  <title>fromCsv method - Table class - sdartistics library - Dart API</title>
+  <meta name="description" content="API docs for the columnsNames property from the Table class, for the Dart programming language.">
+  <title>columnsNames property - Table class - sdartistics library - Dart API</title>
 
 
   
@@ -32,9 +32,9 @@
     <li><a href="../../index.html">sdartistics</a></li>
     <li><a href="../../sdartistics/sdartistics-library.html">sdartistics</a></li>
     <li><a href="../../sdartistics/Table-class.html">Table</a></li>
-    <li class="self-crumb">fromCsv method</li>
+    <li class="self-crumb">columnsNames property</li>
   </ol>
-  <div class="self-name">fromCsv</div>
+  <div class="self-name">columnsNames</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -45,31 +45,32 @@
 
   <div id="dartdoc-main-content" class="main-content">
       <div>
-<h1><span class="kind-method">fromCsv</span> method 
+<h1><span class="kind-property">columnsNames</span> property 
     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
 </h1></div>
 
-    <section class="multi-line-signature">
-      
 
-<span class="returntype"><a href="https://api.dart.dev/stable/2.14.4/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../sdartistics/Table-class.html">Table</a></span>&gt;</span></span>
-<span class="name ">fromCsv</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fromCsv-param-path"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span>, </span></li>
-<li><span class="parameter" id="fromCsv-param-verbose">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">verbose</span> = <span class="default-value">false</span>}</span></li>
-</ol>)
+        
+<section id="getter">
 
-      
+<section class="multi-line-signature">
+  <span class="returntype"><a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  <span class="name ">columnsNames</span>
+  
 
-    </section>
-    
-<section class="desc markdown">
-  <p>Initialize a Table with a CSV file.</p>
 </section>
 
 
-    
+<section class="desc markdown">
+  <p>Get the names of columns of the original table without modifications.</p>
+</section>
+
+
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">static Future&lt;Table&gt; fromCsv(String path, {bool verbose = false}) async =&gt; Table._(await DataFrame.fromCsv(path, verbose: verbose));</code></pre>
+  <pre class="language-dart"><code class="language-dart">List&lt;String&gt; get columnsNames =&gt; _table.columnsNames;</code></pre>
+</section>
+
 </section>
 
 
@@ -86,7 +87,7 @@
   <li><a href="../../index.html">sdartistics</a></li>
   <li><a href="../../sdartistics/sdartistics-library.html">sdartistics</a></li>
   <li><a href="../../sdartistics/Table-class.html">Table</a></li>
-  <li class="self-crumb">fromCsv method</li>
+  <li class="self-crumb">columnsNames property</li>
 </ol>
 
 

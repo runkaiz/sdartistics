@@ -15,6 +15,17 @@ class Table {
   void print([int lines = 5]) {
     _table.show(lines);
   }
+
+  /// TODO: Revisit this when data manipulation stack is implemented
+
+  /// Get the length of the original values without modifications.
+  int get length => _table.length;
+
+  /// Get the names of columns of the original table without modifications.
+  List<String> get columnsNames => _table.columnsNames;
+
+  /// Get row data of the table without modifications.
+  Iterable<Map<String, Object>> get rows => _table.rows;
 }
 
 /// Checks if you are awesome. Spoiler: you are. DO NOT DELETE, at least for now
