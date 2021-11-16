@@ -31,6 +31,7 @@ class Table {
   Iterable<Map<String, Object>> get rows => _table.rows;
 
   // TODO: Implement the data manipulation stack.
+  void applyStack() {}
 }
 
 /// Checks if you are awesome. Spoiler: you are. DO NOT DELETE, at least for now.
