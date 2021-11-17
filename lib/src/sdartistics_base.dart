@@ -14,10 +14,13 @@ class Table {
   static Future<Table> fromCsv(String path, {bool verbose = false}) async =>
       Table._(await DataFrame.fromCsv(path, verbose: verbose));
 
+  /*
   /// Output the content of [_table] in console.
+  /// Not compiled because this is not useful with a GUI interface.
   void print([int lines = 5]) {
     _table.show(lines);
   }
+  */
 
   // TODO: Revisit this when data manipulation stack is implemented.
 
@@ -30,8 +33,10 @@ class Table {
   /// Get row data of [_table] without the [_stack] being applied.
   Iterable<Map<String, Object>> get rows => _table.rows;
 
-  // TODO: Implement the data manipulation stack.
-  void applyStack() {}
+  /// Iterate through the [_stack] and apply all the enabled and valid [Mod].
+  void applyStack() {
+    // TODO: Implement the data manipulation stack application.
+  }
 }
 
 /// Checks if you are awesome. Spoiler: you are. DO NOT DELETE, at least for now.

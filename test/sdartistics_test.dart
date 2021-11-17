@@ -68,5 +68,17 @@ void main() {
       final Mod newMod = Mod(Operation.AddRow);
       expect(newMod.validity(), false);
     });
+
+    test('Test enable and disable toggle.', () {
+      final Mod disableMod = Mod(Operation.AddRow);
+      expect(disableMod.isEnabled, false);
+      disableMod.enable(true);
+      expect(disableMod.isEnabled, true);
+    });
+
+    test('Test getting the type of Mod.', () {
+      final Mod typeMod = Mod(Operation.AddRow);
+      expect(typeMod.type, Operation.AddRow);
+    });
   });
 }

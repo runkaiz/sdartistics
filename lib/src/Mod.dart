@@ -1,12 +1,11 @@
 /// A pre-determined list of supported operations.
 enum Operation {
-  None,
   AddRow,
 }
 
 class Mod {
   /// The type of [Operation] should remain constant.
-  Operation _type = Operation.None;
+  Operation _type;
 
   /// User-controlled setting of whether this [Mod] should be applied or not, this can be overwritten by [validity].
   bool _isEnabled = false;
@@ -16,7 +15,7 @@ class Mod {
   Map<String, Object> _row = {};
 
   /// Initialize a [Mod] with a [Operation] type.
-  Mod(Operation type) {
+  Mod(this._type) {
     _type = type;
   }
 
@@ -38,21 +37,19 @@ class Mod {
             return false;
           }
         }
-      case Operation.None:
-        {
-          return false;
-        }
-      default:
-        {
-          /// TODO: Set up a better way for debugging
-          print(
-              'This should NEVER appear unless the code is faulty in levels one cannot comprehend.');
-          return false;
-        }
     }
+  }
+
+  /// Set the enabled state of this [Mod]
+  bool enable(bool enable) {
+    _isEnabled = enable;
+
+    return enable;
   }
 
   /// Returns the type of this Mod.
   Operation get type => _type;
+
+  /// Get whether the user has enabled or disabled this [Mod].
   bool get isEnabled => _isEnabled;
 }
