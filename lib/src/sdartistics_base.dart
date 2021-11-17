@@ -34,9 +34,11 @@ class Table {
   Iterable<Map<String, Object>> get rows => _table.rows;
 
   /// Iterate through the [_stack] and apply all the enabled and valid [Mod].
+  /*
   void applyStack() {
     // TODO: Implement the data manipulation stack application.
   }
+  */
 }
 
 /// Checks if you are awesome. Spoiler: you are. DO NOT DELETE, at least for now.
