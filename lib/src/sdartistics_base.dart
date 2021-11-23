@@ -33,12 +33,12 @@ class Table {
   /// Get row data of [_table] without the [_stack] being applied.
   Iterable<Map<String, Object>> get rows => _table.rows;
 
-  /// Iterate through the [_stack] and apply all the enabled and valid [Mod].
-  /*
-  void applyStack() {
-    // TODO: Implement the data manipulation stack application.
+  /// Iterate through the [_stack] and apply all the enabled and valid [Mod]
+  Future<DataFrame> applyStack() async {
+    DataFrame result = await _stack.apply();
+
+    return result;
   }
-  */
 
   /// Assign a [ModStack] to [Table].
   void setStack(ModStack input) {

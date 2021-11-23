@@ -1,4 +1,6 @@
 import 'dart:collection';
+import 'package:dartaframe/dartaframe.dart';
+
 import './Mod.dart';
 
 class ModStack {
@@ -23,6 +25,12 @@ class ModStack {
   /// Empties all [Mod] from [ModStack].
   void clear() {
     _stack.clear();
+  }
+
+  /// TODO: Implement applying the [ModStack]
+  /// WARNING: Don't use this right now please.
+  Future<DataFrame> apply() async {
+    return DataFrame();
   }
 
   /// Returns true when [ModStack] is empty.
