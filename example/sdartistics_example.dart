@@ -1,10 +1,10 @@
 import 'package:sdartistics/sdartistics.dart';
 
 Future<void> main() async {
-  //final df = await Table.fromCsv('example/datasets/incomplete.csv');
-  //df.print();
+  final df = await Table.fromCsv('example/datasets/incomplete.csv');
+  print(df.rows);
 
-  //final ModStack testStack = ModStack("Test Stack");
+  final ModStack testStack = ModStack("Test Stack");
 
-  //print(testStack.count);
+  print(testStack.count);
 }

@@ -39,6 +39,11 @@ class Table {
     // TODO: Implement the data manipulation stack application.
   }
   */
+
+  /// Assign a [ModStack] to [Table].
+  void setStack(ModStack input) {
+    _stack = input;
+  }
 }
 
 /// Checks if you are awesome. Spoiler: you are. DO NOT DELETE, at least for now.
