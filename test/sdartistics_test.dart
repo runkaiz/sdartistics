@@ -1,6 +1,9 @@
+import 'dart:ffi';
+
 import 'package:dartaframe/dartaframe.dart';
 import 'package:sdartistics/sdartistics.dart';
 import 'package:sdartistics/src/Mod.dart';
+import 'package:sdartistics/src/Statistics/Calculator.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -79,6 +82,23 @@ void main() {
     test('Test getting the type of Mod.', () {
       final Mod typeMod = Mod(Operation.AddRow);
       expect(typeMod.type, Operation.AddRow);
+    });
+  });
+
+  group('Calculator tests', () {
+    List<double> testList = [1.2, 1.3, 1.4];
+
+    test('Test sum', () {
+      expect(Calculator.sum(testList), 3.9);
+    });
+    test('Test mean', () {
+      expect(Calculator.mean(testList), 1.3);
+    });
+    test('Test min', () {
+      expect(Calculator.min(testList), 1.2);
+    });
+    test('Test max', () {
+      expect(Calculator.max(testList), 1.4);
     });
   });
 }
