@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:dartaframe/dartaframe.dart';
 import 'package:sdartistics/sdartistics.dart';
 import 'package:sdartistics/src/Mod.dart';
