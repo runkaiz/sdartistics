@@ -95,21 +95,16 @@ class SampleDescriptives {
   }
 
   /// Calculate the frequency of values in a list, return a map of values and their frequencies
-  /// The list accepts a list of numbers or strings, but the map will be keyed by the string representation of the number
-  static Map<String, int> frequency(List<dynamic> input) {
-    Map<String, int> result = {};
+  static Map<dynamic, int> frequency(List<dynamic> input) {
+    Map<dynamic, int> result = {};
 
     for (var i = 0; i < input.length; i++) {
-      var current = input[i];
-      var currentCount = 1;
-
-      for (var j = i + 1; j < input.length; j++) {
-        if (current == input[j]) {
-          currentCount++;
-        }
+      var value = input[i];
+      if (result.containsKey(value)) {
+        result[value] = result[value]! + 1;
+      } else {
+        result[value] = 1;
       }
-
-      result[current.toString()] = currentCount;
     }
 
     return result;
