@@ -3,7 +3,7 @@ import 'dart:ffi';
 import 'package:dartaframe/dartaframe.dart';
 import 'package:sdartistics/sdartistics.dart';
 import 'package:sdartistics/src/Mod.dart';
-import 'package:sdartistics/src/Statistics/Calculator.dart';
+import 'package:sdartistics/src/Statistics/SampleDescriptives.dart';
 import 'package:test/test.dart';
 
 void main() {
