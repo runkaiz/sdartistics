@@ -10,7 +10,7 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
-[![Dart CI](https://github.com/runkaiz/sdartistics/actions/workflows/main.yml/badge.svg)](https://github.com/runkaiz/sdartistics/actions/workflows/main.yml)
+[![Dart CI](https://github.com/runkaiz/sdartistics/actions/workflows/main.yml/badge.svg)](https://github.com/runkaiz/sdartistics/actions/workflows/main.yml) [![codecov](https://codecov.io/gh/runkaiz/sdartistics/branch/main/graph/badge.svg?token=eFmtCIikp2)](https://codecov.io/gh/runkaiz/sdartistics)
 
 # Sdartistics
 A statistics package written in Dart. This package powers [SP2S](https://github.com/yych42/SP2S).
