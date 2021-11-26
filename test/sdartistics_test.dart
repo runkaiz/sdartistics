@@ -123,7 +123,7 @@ void main() {
       'standardDeviation': 0.99,
       'skewness': -0.24,
       'kurtosis': 5.77,
-      'kurtosisExcess': 2.23,
+      'excessKurtosis': 2.23,
       'coefficientOfVariation': 1.10,
       'standardError': 0.22,
     };
@@ -171,8 +171,8 @@ void main() {
     });
 
     test('Test kurtosis excess', () {
-      expect(_round(SampleDescriptives.kurtosisExcess(testList)),
-          testDescriptives['kurtosisExcess']);
+      expect(_round(SampleDescriptives.excessKurtosis(testList)),
+          testDescriptives['excessKurtosis']);
     });
 
     test('Test coefficient of variation', () {

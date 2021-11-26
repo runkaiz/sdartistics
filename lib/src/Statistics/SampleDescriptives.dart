@@ -1,7 +1,14 @@
 import 'dart:math';
 
-/// A class encapsulating read-only statistical calculations.
+/// A class encapsulating static statistical functions for sample datasets.
+///
+/// Example:
+/// ```dart
+///  var data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+///  var mean = SampleDescriptives.mean(data); // 5.5
+/// ```
 class SampleDescriptives {
+  /// Returns the mean of a sample dataset.
   static double mean(List<double> input) {
     int count = input.length;
     double result = sum(input);
@@ -11,12 +18,14 @@ class SampleDescriptives {
     return result;
   }
 
+  /// Returns the sum of a sample dataset.
   static double sum(List<double> input) {
     double result = input.fold(0, (p, c) => p + c);
 
     return result;
   }
 
+  /// Returns the minimum value of a sample dataset.
   static double min(List<double> input) {
     var smallestValue = input[0];
 
@@ -30,6 +39,7 @@ class SampleDescriptives {
     return smallestValue;
   }
 
+  /// Returns the maximum value of a sample dataset.
   static double max(List<double> input) {
     var largestValue = input[0];
 
@@ -63,8 +73,9 @@ class SampleDescriptives {
     }
   }
 
-  /// Find the mode of a list of numbers.
-  /// Return a list of modes. If there are no modes, return an empty list.
+  /// Returns the mode of a sample dataset.
+  ///
+  /// If there are no modes, return an empty list.
   static List<double> mode(List<double> input) {
     var counts = <double, int>{};
     var modes = <double>[];
@@ -94,7 +105,7 @@ class SampleDescriptives {
     return modes;
   }
 
-  /// Calculate the frequency of values in a list, return a map of values and their frequencies
+  /// Return a map of of original values (key) and their frequencies (value).
   static Map<dynamic, int> frequency(List<dynamic> input) {
     Map<dynamic, int> result = {};
 
@@ -110,6 +121,7 @@ class SampleDescriptives {
     return result;
   }
 
+  /// Returns the variance of a sample dataset.
   static double variance(List<double> input) {
     double meanValue = mean(input);
     double result = 0;
@@ -123,6 +135,7 @@ class SampleDescriptives {
     return result;
   }
 
+  /// Returns the standard deviation of a sample dataset.
   static double standardDeviation(List<double> input) {
     double meanValue = mean(input);
     double sumOfSquaredDifferences = 0.0;
@@ -136,6 +149,7 @@ class SampleDescriptives {
     return result;
   }
 
+  /// Returns the coefficient of variation of a sample dataset.
   static double coefficientOfVariation(List<double> input) {
     double standardDeviationValue = standardDeviation(input);
     double meanValue = mean(input);
@@ -144,6 +158,7 @@ class SampleDescriptives {
     return result;
   }
 
+  /// Returns the skewness of a sample dataset.
   static double skewness(List<double> input) {
     double meanValue = mean(input);
     double sd = standardDeviation(input);
@@ -159,6 +174,7 @@ class SampleDescriptives {
     return result;
   }
 
+  /// Returns the kurtosis of a sample dataset.
   static double kurtosis(List<double> input) {
     double meanValue = mean(input);
     double sd = standardDeviation(input);
@@ -171,16 +187,15 @@ class SampleDescriptives {
     double step_1 = input.length /
         (input.length - 1) *
         (input.length + 1) /
-        (input.length - 2) *
-        1 /
+        (input.length - 2) /
         (input.length - 3);
     result = step_1 * result;
 
     return result;
   }
 
-  /// SPSS reports kurtosis excess as kurtosis.
-  static double kurtosisExcess(List<double> input) {
+  /// Returns the excess kurtosis  of a sample dataset.
+  static double excessKurtosis(List<double> input) {
     double kurtosisValue = kurtosis(input);
     double result = 0;
 
@@ -194,6 +209,7 @@ class SampleDescriptives {
     return result;
   }
 
+  /// Returns the standard error of the mean of a sample dataset.
   static double standardError(List<double> input) {
     double standardDeviationValue = standardDeviation(input);
     double result = standardDeviationValue / sqrt(input.length);
