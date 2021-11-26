@@ -53,6 +53,14 @@ class SampleDescriptives {
     return largestValue;
   }
 
+  /// Returns the range of a sample dataset.
+  static double range(List<double> input) {
+    double result = max(input) - min(input);
+
+    return result;
+  }
+
+  /// Returns the median value of a sample dataset.
   static double median(List<double> input) {
     var sortedList = input.toList();
     sortedList.sort();

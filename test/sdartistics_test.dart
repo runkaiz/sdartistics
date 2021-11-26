@@ -116,6 +116,7 @@ void main() {
       'sum': 17.97,
       'max': 3.25,
       'min': -1.53,
+      'range': 4.78,
       'mean': 0.8985,
       'median': 0.92,
       'mode': [0.86, 0.75],
@@ -139,6 +140,10 @@ void main() {
     });
     test('Test max', () {
       expect(SampleDescriptives.max(testList), testDescriptives['max']);
+    });
+
+    test('Test range', () {
+      expect(SampleDescriptives.range(testList), testDescriptives['range']);
     });
 
     test('Test median', () {
