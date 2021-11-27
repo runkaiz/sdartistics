@@ -33,7 +33,7 @@ class Table {
   /// Get row data of [_table] without the [_stack] being applied.
   Iterable<Map<String, Object>> get rows => _table.rows;
 
-  /// Iterate through the [_stack] and apply all the enabled and valid [Mod]
+  /// Iterate through the [_stack] and apply it.
   Future<DataFrame> applyStack() async {
     DataFrame result = await _stack.apply();
 

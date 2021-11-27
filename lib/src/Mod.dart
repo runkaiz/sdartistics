@@ -3,15 +3,21 @@ enum Operation {
   AddRow,
 }
 
+/// A [Mod] represents a single [Operation] which will be stored in a [ModStack].
+/// All [Mod] will perform a validity check to determine whether it can be safely
+/// executed. Setting [_isEnabled] will allow users to manually toggle the [Mod]
+/// on and off.
 class Mod {
   /// The type of [Operation] should remain constant.
   Operation _type;
 
-  /// User-controlled setting of whether this [Mod] should be applied or not, this can be overwritten by [validity].
+  /// User-controlled setting of whether this [Mod] should be applied or not,
+  /// this can be overwritten by [validity].
   bool _isEnabled = false;
 
   /// Store parameters to pass.
-  /// TODO: There HAS to be a better way for this but I am sticking on the simple and yet stupid side for now.
+  /// TODO: There HAS to be a better way for this but I am sticking on the
+  /// simple and yet stupid side for now.
   Map<String, Object> _row = {};
 
   /// Initialize a [Mod] with a [Operation] type.

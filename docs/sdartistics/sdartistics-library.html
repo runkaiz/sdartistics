@@ -71,7 +71,14 @@
 
 </dt>
 <dd>
-   
+  A <a href="../sdartistics/ModStack-class.html">ModStack</a> stores a stack of <code>Mod</code> in order, making management, save,
+duplication of the <code>Mod</code> stack to be easier and efficient. It would allow
+complex operations to be applied to a <a href="../sdartistics/Table-class.html">Table</a> without directly modifying the
+original data. Another feature that <a href="../sdartistics/ModStack-class.html">ModStack</a> has is to allow the result
+to be accessible at any stage in time: it is possible get the resulting
+<a href="../sdartistics/Table-class.html">Table</a> as soon as the first <code>Mod</code> is sucessfully performed. This way one
+can save troubleshooting time by verifying whether operations were correctly
+configured without having to wait for the entire <a href="../sdartistics/ModStack-class.html">ModStack</a> to complete. 
 </dd>
 
         <dt id="Table">

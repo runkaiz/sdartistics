@@ -52,7 +52,7 @@
     <section class="multi-line-signature">
       
 
-<span class="returntype">void</span>
+<span class="returntype"><a href="https://api.dart.dev/stable/2.14.4/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/dartaframe/0.0.3/dartaframe/DataFrame-class.html">DataFrame</a></span>&gt;</span></span>
 <span class="name ">applyStack</span>(<wbr>)
 
       
@@ -60,15 +60,17 @@
     </section>
     
 <section class="desc markdown">
-  <p>Iterate through the <code>_stack</code> and apply all the enabled and valid <code>Mod</code>.</p>
+  <p>Iterate through the <code>_stack</code> and apply it.</p>
 </section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">void applyStack() {
-  &#47;&#47; TODO: Implement the data manipulation stack application.
+  <pre class="language-dart"><code class="language-dart">Future&lt;DataFrame&gt; applyStack() async {
+  DataFrame result = await _stack.apply();
+
+  return result;
 }</code></pre>
 </section>
 
@@ -107,6 +109,7 @@
     <li class="section-title"><a href="../../sdartistics/Table-class.html#instance-methods">Methods</a></li>
     <li><a href="../../sdartistics/Table/applyStack.html">applyStack</a></li>
     <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li><a href="../../sdartistics/Table/setStack.html">setStack</a></li>
     <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/toString.html">toString</a></li>
 
     <li class="section-title inherited"><a href="../../sdartistics/Table-class.html#operators">Operators</a></li>

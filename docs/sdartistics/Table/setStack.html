@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the print method from the Table class, for the Dart programming language.">
-  <title>print method - Table class - sdartistics library - Dart API</title>
+  <meta name="description" content="API docs for the setStack method from the Table class, for the Dart programming language.">
+  <title>setStack method - Table class - sdartistics library - Dart API</title>
 
 
   
@@ -32,9 +32,9 @@
     <li><a href="../../index.html">sdartistics</a></li>
     <li><a href="../../sdartistics/sdartistics-library.html">sdartistics</a></li>
     <li><a href="../../sdartistics/Table-class.html">Table</a></li>
-    <li class="self-crumb">print method</li>
+    <li class="self-crumb">setStack method</li>
   </ol>
-  <div class="self-name">print</div>
+  <div class="self-name">setStack</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -45,7 +45,7 @@
 
   <div id="dartdoc-main-content" class="main-content">
       <div>
-<h1><span class="kind-method">print</span> method 
+<h1><span class="kind-method">setStack</span> method 
     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
 </h1></div>
 
@@ -53,7 +53,7 @@
       
 
 <span class="returntype">void</span>
-<span class="name ">print</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="print-param-lines">[<span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">lines</span> = <span class="default-value">5</span>]</span></li>
+<span class="name ">setStack</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="setStack-param-input"><span class="type-annotation"><a href="../../sdartistics/ModStack-class.html">ModStack</a></span> <span class="parameter-name">input</span></span></li>
 </ol>)
 
       
@@ -61,15 +61,15 @@
     </section>
     
 <section class="desc markdown">
-  <p>Output the content of <code>_table</code> in console.</p>
+  <p>Assign a <a href="../../sdartistics/ModStack-class.html">ModStack</a> to <a href="../../sdartistics/Table-class.html">Table</a>.</p>
 </section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">void print([int lines = 5]) {
-  _table.show(lines);
+  <pre class="language-dart"><code class="language-dart">void setStack(ModStack input) {
+  _stack = input;
 }</code></pre>
 </section>
 
@@ -87,7 +87,7 @@
   <li><a href="../../index.html">sdartistics</a></li>
   <li><a href="../../sdartistics/sdartistics-library.html">sdartistics</a></li>
   <li><a href="../../sdartistics/Table-class.html">Table</a></li>
-  <li class="self-crumb">print method</li>
+  <li class="self-crumb">setStack method</li>
 </ol>
 
 
@@ -108,7 +108,7 @@
     <li class="section-title"><a href="../../sdartistics/Table-class.html#instance-methods">Methods</a></li>
     <li><a href="../../sdartistics/Table/applyStack.html">applyStack</a></li>
     <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li><a href="../../sdartistics/Table/print.html">print</a></li>
+    <li><a href="../../sdartistics/Table/setStack.html">setStack</a></li>
     <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/toString.html">toString</a></li>
 
     <li class="section-title inherited"><a href="../../sdartistics/Table-class.html#operators">Operators</a></li>
