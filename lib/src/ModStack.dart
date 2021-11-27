@@ -35,7 +35,7 @@ class ModStack {
     _stack.clear();
   }
 
-  /// TODO: Implement applying the [ModStack]
+  /// TODO: Implement applying the [ModStack].
   /// WARNING: Don't use this right now please.
   Future<DataFrame> apply() async {
     return DataFrame();
