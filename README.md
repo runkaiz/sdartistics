@@ -42,3 +42,4 @@ Some commands to run during development:
 ```shell
 foo@bar:~$ dartdoc --output docs
 ```
+I used the `alias` command in Linux so that the command `ddg` would produce the same results, the extra flag is added for GitHub Pages compatibility.
