@@ -1,7 +1,6 @@
 import 'package:dartaframe/dartaframe.dart';
 import 'package:sdartistics/sdartistics.dart';
 import 'package:sdartistics/src/Mod.dart';
-import 'package:sdartistics/src/Statistics/SampleDescriptives.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -80,6 +79,19 @@ void main() {
     test('Test getting the type of Mod.', () {
       final Mod typeMod = Mod(Operation.AddRow);
       expect(typeMod.type, Operation.AddRow);
+    });
+  });
+
+  group("Utilities tests", () {
+    test('RoundDouble', () {
+      expect(Utils.roundDouble(1.23456789, 1), equals(1.2));
+      expect(Utils.roundDouble(1.23456789, 2), equals(1.23));
+      expect(Utils.roundDouble(1.23456789, 3), equals(1.235));
+      expect(Utils.roundDouble(1.23456789, 4), equals(1.2346));
+      expect(Utils.roundDouble(1.23456789, 5), equals(1.23457));
+      expect(Utils.roundDouble(1.23456789, 6), equals(1.234568));
+      expect(Utils.roundDouble(1.23456789, 7), equals(1.2345679));
+      expect(Utils.roundDouble(1.23456789, 8), equals(1.23456789));
     });
   });
 
