@@ -119,7 +119,28 @@ void main() {
       'range': 4.78,
       'mean': 0.8985,
       'median': 0.92,
+      'median_odd': 2,
       'mode': [0.86, 0.75],
+      'frequency': {
+        1.00: 1,
+        1.03: 1,
+        1.42: 1,
+        1.39: 1,
+        2.10: 1,
+        0.86: 2,
+        0.98: 1,
+        1.36: 1,
+        1.38: 1,
+        -0.65: 1,
+        -0.20: 1,
+        0.75: 2,
+        -1.53: 1,
+        1.62: 1,
+        0.49: 1,
+        0.51: 1,
+        0.60: 1,
+        3.25: 1
+      },
       'variance': 0.97,
       'standardDeviation': 0.99,
       'skewness': -0.24,
@@ -151,8 +172,18 @@ void main() {
           testDescriptives['median']);
     });
 
+    test('Test median_odd', () {
+      expect(SampleDescriptives.median([1, 1, 2, 3, 5]),
+          testDescriptives['median_odd']);
+    });
+
     test('Test mode', () {
       expect(SampleDescriptives.mode(testList), testDescriptives['mode']);
+    });
+
+    test('Test frequency', () {
+      expect(SampleDescriptives.frequency(testList),
+          testDescriptives['frequency']);
     });
 
     test('Test variance', () {
