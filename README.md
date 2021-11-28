@@ -17,19 +17,19 @@ A statistics package written in Dart. This package powers [SP2S](https://github.
 
 ## Features
 
--[ ] Utility
-  -[x] `double roundDouble(double value, [int places = 1])`
--[x] Sample Descriptives
-  -[x] Count for n
-  -[x] Calculate sum
-  -[x] Central tendency: mean, mode, median
-  -[x] Simple range: min, max
-  -[x] Dispersion: variance, standard deviation, coefficient of variation, range
-  -[x] Shape: skewness, kurtosis, excess kurtosis
-  -[x] Frequency for values
--[ ] Compare Means
--[ ] Simple Regression
--[ ] Provide data for graphs
+- [ ] Utility
+  - [x] `double roundDouble(double value, [int places = 1])`
+- [x] Sample Descriptives
+  - [x] Count for n
+  - [x] Calculate sum
+  - [x] Central tendency: mean, mode, median
+  - [x] Simple range: min, max
+  - [x] Dispersion: variance, standard deviation, coefficient of variation, range
+  - [x] Shape: skewness, kurtosis, excess kurtosis
+  - [x] Frequency for values
+- [ ] Compare Means
+- [ ] Simple Regression
+- [ ] Provide data for graphs
 
 ## Getting started
 
@@ -37,7 +37,7 @@ Install the Dart SDK on your development machine, then clone this project and be
 
 ## Usage
 
--[ ] See `/example` folder for more details. 
+- [ ] See `/example` folder for more details. 
 
 ```dart
 Future<void> main() async {
