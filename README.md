@@ -45,6 +45,7 @@ A statistics package written in Dart. This package powers [SP2S](https://github.
   - [ ] Correlation and Linear Regression
     - [ ] Pearson's product-moment correlation
     - [ ] Spearman's rank correlation
+    - [ ] General linear models
     - [ ] Generalized linear models
 - [ ] Provide data for graphs
 
