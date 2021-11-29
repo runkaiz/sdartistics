@@ -42,11 +42,11 @@ A statistics package written in Dart. This package powers [SP2S](https://github.
     - [ ] Kruskal Wallis
     - [ ] Wilcoxon signed ranks test
     - [ ] One-way ANOVA
-  - [ ] Correlation and Linear Regression
-    - [ ] Pearson's product-moment correlation
-    - [ ] Spearman's rank correlation
-    - [ ] General linear models
-    - [ ] Generalized linear models
+- [ ] Correlation and Linear Regression
+  - [ ] Pearson's product-moment correlation
+  - [ ] Spearman's rank correlation
+  - [ ] General linear models
+  - [ ] Generalized linear models
 - [ ] Provide data for graphs
 
 ## Getting started
