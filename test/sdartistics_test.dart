@@ -82,6 +82,20 @@ void main() {
     });
   });
 
+  group('Regression tests', () {
+    test('Pearson', () {
+      List<double> X = [15, 18, 21, 24, 27];
+      List<double> Y = [25, 25, 27, 31, 32];
+
+      // Find the size of array.
+      int n = X.length;
+
+      // Function call to correlationCoefficient.
+      expect(CorrelationAndLinearRegression.correlationCoefficient(X, Y, n),
+          0.9534625892455922);
+    });
+  });
+
   group("Utilities tests", () {
     test('RoundDouble', () {
       expect(Utils.roundDouble(1.23456789, 1), equals(1.2));
