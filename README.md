@@ -27,8 +27,26 @@ A statistics package written in Dart. This package powers [SP2S](https://github.
   - [x] Dispersion: variance, standard deviation, coefficient of variation, range
   - [x] Shape: skewness, kurtosis, excess kurtosis
   - [x] Frequency for values
-- [ ] Compare Means
-- [ ] Simple Regression
+- [ ] Test Statistics
+  - [ ] Discrete
+    - [ ] Binomial test
+    - [ ] Chi-square goodness-of-fit test
+    - [ ] Chi-square test
+    - [ ] Fisher's exact test
+    - [ ] McNemar's test
+  - [ ] Continuous
+    - [ ] One-sample T-test
+    - [ ] Two independent samples T-test
+    - [ ] Two paired samples T-test
+    - [ ] Wilcoxon rank-sum test
+    - [ ] Kruskal Wallis
+    - [ ] Wilcoxon signed ranks test
+    - [ ] One-way ANOVA
+- [ ] Correlation and Linear Regression
+  - [ ] Pearson's product-moment correlation
+  - [ ] Spearman's rank correlation
+  - [ ] General linear models
+  - [ ] Generalized linear models
 - [ ] Provide data for graphs
 
 ## Getting started
@@ -45,7 +63,7 @@ Future<void> main() async {
   df.print();
 
   final double var1_mean = SampleDescriptives.mean(df.colRecords<int>('variable_1'));
-  print(roundDounle(var1_mean, 2)) //2.67
+  print(roundDouble(var1_mean, 2)) //2.67
 }
 ```
 
