@@ -48,14 +48,39 @@
 <h1 id="sdartistics">Sdartistics</h1>
 <p>A statistics package written in Dart. This package powers <a href="https://github.com/yych42/SP2S">SP2S</a>.</p>
 <h2 id="features">Features</h2>
-<p>TODO: List what your package can do. Maybe include images, gifs, or videos.</p>
+<ul>
+<li><code> </code> Utility
+<ul>
+<li><code>x</code> <code>double roundDouble(double value, [int places = 1])</code></li>
+</ul>
+</li>
+<li><code>x</code> Sample Descriptives
+<ul>
+<li><code>x</code> Count for n</li>
+<li><code>x</code> Calculate sum</li>
+<li><code>x</code> Central tendency: mean, mode, median</li>
+<li><code>x</code> Simple range: min, max</li>
+<li><code>x</code> Dispersion: variance, standard deviation, coefficient of variation, range</li>
+<li><code>x</code> Shape: skewness, kurtosis, excess kurtosis</li>
+<li><code>x</code> Frequency for values</li>
+</ul>
+</li>
+<li><code> </code> Compare Means</li>
+<li><code> </code> Simple Regression</li>
+<li><code> </code> Provide data for graphs</li>
+</ul>
 <h2 id="getting-started">Getting started</h2>
 <p>Install the Dart SDK on your development machine, then clone this project and begin hacking!</p>
 <h2 id="usage">Usage</h2>
-<p>See <code>/example</code> folder for more details.</p>
+<ul>
+<li><code> </code> See <code>/example</code> folder for more details.</li>
+</ul>
 <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; main() async {
   final df = await Table.fromCsv('datasets/incomplete.csv');
   df.print();
+
+  final double var1_mean = SampleDescriptives.mean(df.colRecords&lt;int&gt;('variable_1'));
+  print(roundDounle(var1_mean, 2)) //2.67
 }
 </code></pre>
 <h2 id="additional-information">Additional information</h2>

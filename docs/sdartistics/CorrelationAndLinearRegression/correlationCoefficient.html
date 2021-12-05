@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the correlationCoefficient method from the CorrelationAndLinearRegression class, for the Dart programming language.">
+  <title>correlationCoefficient method - CorrelationAndLinearRegression class - sdartistics library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">sdartistics</a></li>
+    <li><a href="../../sdartistics/sdartistics-library.html">sdartistics</a></li>
+    <li><a href="../../sdartistics/CorrelationAndLinearRegression-class.html">CorrelationAndLinearRegression</a></li>
+    <li class="self-crumb">correlationCoefficient method</li>
+  </ol>
+  <div class="self-name">correlationCoefficient</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-method">correlationCoefficient</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.dart.dev/stable/2.14.4/dart-core/double-class.html">double</a></span>
+<span class="name ">correlationCoefficient</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="correlationCoefficient-param-X"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/double-class.html">double</a></span>&gt;</span></span> <span class="parameter-name">X</span>, </span></li>
+<li><span class="parameter" id="correlationCoefficient-param-Y"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.14.4/dart-core/double-class.html">double</a></span>&gt;</span></span> <span class="parameter-name">Y</span>, </span></li>
+<li><span class="parameter" id="correlationCoefficient-param-n"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.14.4/dart-core/int-class.html">int</a></span> <span class="parameter-name">n</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static double correlationCoefficient(List&lt;double&gt; X, List&lt;double&gt; Y, int n) {
+  double sumX = 0, sumY = 0, sumXY = 0;
+  double squareSumX = 0, squareSumY = 0;
+
+  for (int i = 0; i &lt; n; i++) {
+    &#47;&#47; sum of elements of array X.
+    sumX = sumX + X[i];
+
+    &#47;&#47; sum of elements of array Y.
+    sumY = sumY + Y[i];
+
+    &#47;&#47; sum of X[i] * Y[i].
+    sumXY = sumXY + X[i] * Y[i];
+
+    &#47;&#47; sum of square of array elements.
+    squareSumX = squareSumX + X[i] * X[i];
+    squareSumY = squareSumY + Y[i] * Y[i];
+  }
+
+  &#47;&#47; use Pearson&#39;s formula for calculating correlation
+  &#47;&#47; coefficient.
+  double corr = (n * sumXY - sumX * sumY) &#47;
+      (sqrt((n * squareSumX - sumX * sumX) * (n * squareSumY - sumY * sumY)));
+
+  return corr;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../../index.html">sdartistics</a></li>
+  <li><a href="../../sdartistics/sdartistics-library.html">sdartistics</a></li>
+  <li><a href="../../sdartistics/CorrelationAndLinearRegression-class.html">CorrelationAndLinearRegression</a></li>
+  <li class="self-crumb">correlationCoefficient method</li>
+</ol>
+
+
+    <h5>CorrelationAndLinearRegression class</h5>
+    <ol>
+
+    <li class="section-title"><a href="../../sdartistics/CorrelationAndLinearRegression-class.html#constructors">Constructors</a></li>
+    <li><a href="../../sdartistics/CorrelationAndLinearRegression/CorrelationAndLinearRegression.html">CorrelationAndLinearRegression</a></li>
+
+
+    <li class="section-title inherited">
+      <a href="../../sdartistics/CorrelationAndLinearRegression-class.html#instance-properties">Properties</a>
+    </li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+    <li class="section-title inherited"><a href="../../sdartistics/CorrelationAndLinearRegression-class.html#instance-methods">Methods</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/toString.html">toString</a></li>
+
+    <li class="section-title inherited"><a href="../../sdartistics/CorrelationAndLinearRegression-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.4/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+    <li class="section-title"><a href="../../sdartistics/CorrelationAndLinearRegression-class.html#static-methods">Static methods</a></li>
+    <li><a href="../../sdartistics/CorrelationAndLinearRegression/correlationCoefficient.html">correlationCoefficient</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    sdartistics
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+
