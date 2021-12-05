@@ -23,10 +23,10 @@ class OneSampleTTest {
   /// [expectedMean] is the expected mean of the population.
   OneSampleTTest(double expectedMean, double sampleMean, double sampleSd,
       double sampleSize) {
-    this.mu = mu;
-    this.mean = mean;
-    this.sd = sd;
-    this.n = n;
+    this.mu = expectedMean;
+    this.mean = sampleMean;
+    this.sd = sampleSd;
+    this.n = sampleSize;
   }
 
   double get t => (mean - mu) / sd * sqrt(n);
