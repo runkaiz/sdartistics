@@ -1,6 +1,7 @@
 import 'package:dartaframe/dartaframe.dart';
 import 'package:sdartistics/sdartistics.dart';
 import 'package:sdartistics/src/Mod.dart';
+import 'package:sdartistics/src/Statistics/CompareMeans.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -231,6 +232,17 @@ void main() {
     test('Test standard error', () {
       expect(_round(SampleDescriptives.standardError(testList)),
           testDescriptives['standardError']);
+    });
+  });
+
+  group("Compare means tests", () {
+    test('Test t_cdf', () {
+      expect(Utils.roundDouble(t_cdf(4.14, 199), 3), equals(1.000));
+    });
+
+    test('One Sample T Test', () {
+      expect(Utils.roundDouble(OneSampleTTest(23, 20, 4, 20).p, 8),
+          equals(0.00333284));
     });
   });
 }

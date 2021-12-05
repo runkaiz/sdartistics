@@ -1,6 +1,7 @@
 name: sdartistics
 description: A starting point for Dart libraries or applications.
 version: 1.0.0
+publish_to: none
 # homepage: https://www.example.com
 
 environment:
@@ -11,6 +12,9 @@ dependencies:
   cryptography: ^2.0.5
   dartaframe: ^0.0.1
   ml_linalg: ^13.0.2
+  dart_numerics: 
+    git: https://github.com/yych42/dart_numerics.git
+
 
 dev_dependencies:
   lints: ^1.0.1
