@@ -28,7 +28,7 @@ class OneSampleTTest {
 
   /// The p-value (two-tailed).
   double get p => 2 * (t_cdf(-(t.abs()), n - 1));
-  double get mean_diff => mean - mu;
+  double get meanDiff => mean - mu;
 
   /// Defines a new one-sample t-test.
   ///
@@ -96,7 +96,7 @@ class TwoSampleTTest {
   double get p => 2 * t_cdf(-(t.abs()), df);
 
   /// The difference between the means of the two samples.
-  double get mean_diff => mean1 - mean2;
+  double get meanDiff => mean1 - mean2;
 
   /// The pooled standard deviation for Student's t-test.
   double get _pooled_sd =>

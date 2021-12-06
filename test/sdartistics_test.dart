@@ -267,8 +267,9 @@ void main() {
     });
 
     test('One Sample T Test', () {
-      expect(Utils.roundDouble(OneSampleTTest(23, 20, 4, 20).p, 8),
-          equals(0.00333284));
+      var t = OneSampleTTest(23, 20, 4, 20);
+      expect(Utils.roundDouble(t.meanDiff, 1), equals(-3.0));
+      expect(Utils.roundDouble(t.p, 8), equals(0.00333284));
     });
 
     test('Two Sample T Test - equal variance', () {
@@ -281,6 +282,7 @@ void main() {
     test('Two Sample T Test - unequal variance', () {
       var t = TwoSampleTTest(29.5, 34, 13.17826, 24.83277, 4, 4, false);
 
+      expect(Utils.roundDouble(t.meanDiff, 1), equals(-4.5));
       expect(Utils.roundDouble(t.df, 3), equals(4.566));
       expect(Utils.roundDouble(t.t, 3), equals(-0.320));
       expect(Utils.roundDouble(t.p, 3), equals(0.763));
