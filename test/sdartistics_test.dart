@@ -84,7 +84,7 @@ void main() {
   });
 
   group('Regression tests', () {
-    test('Pearson', () {
+    test('Negative r', () {
       List<double> X = [15, 18, 21, 24, 27];
       List<double> Y = [25, 25, 27, 31, 32];
 
@@ -92,8 +92,20 @@ void main() {
       int n = X.length;
 
       // Function call to correlationCoefficient.
-      expect(CorrelationAndLinearRegression.correlationCoefficient(X, Y, n),
-          0.9534625892455922);
+      expect(PearsonCorrelation(X, Y, n).r, 0.9534625892455922);
+      expect(Utils.roundDouble(PearsonCorrelation(X, Y, n).p, 3), 0.012);
+    });
+
+    test('Positive r', () {
+      List<double> X = [15, 18, 21, 24, 27];
+      List<double> Y = [-25, -25, -27, -31, -32];
+
+      // Find the size of array.
+      int n = X.length;
+
+      // Function call to correlationCoefficient.
+      expect(PearsonCorrelation(X, Y, n).r, -0.9534625892455922);
+      expect(Utils.roundDouble(PearsonCorrelation(X, Y, n).p, 3), 0.012);
     });
   });
 
@@ -257,6 +269,29 @@ void main() {
     test('One Sample T Test', () {
       expect(Utils.roundDouble(OneSampleTTest(23, 20, 4, 20).p, 8),
           equals(0.00333284));
+    });
+
+    test('Two Sample T Test - equal variance', () {
+      expect(
+          Utils.roundDouble(
+              TwoSampleTTest(29.5, 34, 13.17826, 24.83277, 4, 4).p, 7),
+          equals(0.7597186));
+    });
+
+    test('Two Sample T Test - unequal variance', () {
+      var t = TwoSampleTTest(29.5, 34, 13.17826, 24.83277, 4, 4, false);
+
+      expect(Utils.roundDouble(t.df, 3), equals(4.566));
+      expect(Utils.roundDouble(t.t, 3), equals(-0.320));
+      expect(Utils.roundDouble(t.p, 3), equals(0.763));
+    });
+
+    test('Two Sample Paired T Test', () {
+      var t = TwoSamplePairedTTest([31, 31, 12, 44], [56, 12, 55, 13]);
+
+      expect(Utils.roundDouble(t.t, 3), equals(-0.256));
+      expect(Utils.roundDouble(t.p, 3), equals(0.815));
+      expect(Utils.roundDouble(t.stdErr, 3), equals(17.595));
     });
   });
 }

@@ -1,8 +1,13 @@
 import 'dart:math';
 
-class CorrelationAndLinearRegression {
-  // function that returns correlation coefficient.
-  static double correlationCoefficient(List<double> X, List<double> Y, int n) {
+import 'package:sdartistics/sdartistics.dart';
+
+class PearsonCorrelation {
+  late double r;
+  late double t;
+  late double p;
+
+  PearsonCorrelation(List<double> X, List<double> Y, int n) {
     double sumX = 0, sumY = 0, sumXY = 0;
     double squareSumX = 0, squareSumY = 0;
 
@@ -23,9 +28,13 @@ class CorrelationAndLinearRegression {
 
     // use Pearson's formula for calculating correlation
     // coefficient.
-    double corr = (n * sumXY - sumX * sumY) /
+    this.r = (n * sumXY - sumX * sumY) /
         (sqrt((n * squareSumX - sumX * sumX) * (n * squareSumY - sumY * sumY)));
 
-    return corr;
+    // calculate the t value
+    this.t = (this.r * sqrt(n - 2)) / sqrt(1 - this.r * this.r);
+
+    // calculate the p value
+    this.p = 2 * t_cdf(-(this.t.abs()), n - 2);
   }
 }
