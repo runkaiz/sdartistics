@@ -295,5 +295,13 @@ void main() {
       expect(Utils.roundDouble(t.p, 3), equals(0.815));
       expect(Utils.roundDouble(t.stdErr, 3), equals(17.595));
     });
+
+    test('WMW Test', () {
+      var wmw = WMWTest([31, 31, 12, 44], [56, 12, 55, 13]);
+
+      expect(wmw.n1, equals(4));
+      expect(wmw.n2, equals(4));
+      expect(Utils.roundDouble(wmw.u, 3), equals(6.50));
+    });
   });
 }

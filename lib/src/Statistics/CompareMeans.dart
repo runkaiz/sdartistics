@@ -1,6 +1,7 @@
 /*
   This file is still underdevelopment & subject to change.
   DO NOT USE THIS FILE IN PRODUCTION. BREAKING CHANGES ARE VERY LIKELY.
+  TODO: Better documentation and references to clarify the assumptions and appropriate use cases for each of the tests.
 */
 
 import 'dart:math';
@@ -197,6 +198,75 @@ class TwoSamplePairedTTest {
   }
 }
 
-class WMWTest {}
+/// A class to perform Wilcoxon-Mann-Whitney U-test.
+///
+/// The Wilcoxon-Mann-Whitney U-test is a non-parametric statistical test used to compare two i.i.d. samples.
+/// The null hypothesis is that the two samples have the same distribution.
+///
+/// The test is sometimes called the Mann-Whitney U-test, Wilcoxon rank-sum test, or Mann-Whitney-Wilcoxon test.
+/// We are referring to it as the WMW because it is what is used in a popular social science statistical software.
+class WMWTest {
+  late int n1;
+  late int n2;
+  late double meanRank1;
+  late double meanRank2;
+  late double r1;
+  late double r2;
+  late double u1;
+  late double u2;
+  get u => u1 < u2 ? u1 : u2;
+
+  WMWTest(List<double> sample1, List<double> sample2) {
+    n1 = sample1.length;
+    n2 = sample2.length;
+
+    // [[sampleGroup, value, rank]]
+    List<List<double>> samples = [];
+
+    for (int i = 0; i < sample1.length; i++) {
+      samples.add(
+        [1, sample1[i], 1],
+      );
+    }
+    for (int i = 0; i < sample2.length; i++) {
+      samples.add([2, sample2[i], 1]);
+    }
+
+    // Sort the samples by value.
+    samples.sort((a, b) => a[1].compareTo(b[1]));
+
+    // Fractional ranking.
+    // TODO: Clean up this indexing nightmare.
+    for (int i = 1; i < samples.length; i++) {
+      var currentValue = samples[i][1];
+      var lowerIndex = i;
+      while (lowerIndex > 0 && currentValue == samples[lowerIndex - 1][1]) {
+        lowerIndex--;
+      }
+      var unadjustedRanks = List.generate(
+          (i - lowerIndex + 1), (int index) => lowerIndex + index + 1.0);
+      var adjustedRankValue = SampleDescriptives.mean(unadjustedRanks);
+      for (int j = i; j >= (unadjustedRanks[0] - 1); j--) {
+        samples[j][2] = adjustedRankValue;
+      }
+    }
+
+    // Calculate the mean ranks.
+    meanRank1 = SampleDescriptives.mean(
+        samples.where((s) => s[0] == 1).map((s) => s[2]).toList());
+    meanRank2 = SampleDescriptives.mean(
+        samples.where((s) => s[0] == 2).map((s) => s[2]).toList());
+
+    // Calculate the sum of ranks.
+    r1 = SampleDescriptives.sum(
+        samples.where((s) => s[0] == 1).map((s) => s[2]).toList());
+    r2 = SampleDescriptives.sum(
+        samples.where((s) => s[0] == 2).map((s) => s[2]).toList());
+
+    // Calculate the U statistic.
+    u1 = r1 - (n1 * (n1 + 1)) / 2;
+    u2 = r2 - (n2 * (n2 + 1)) / 2;
+  }
+}
 
 class WilcoxonSignedRanksTest {}
