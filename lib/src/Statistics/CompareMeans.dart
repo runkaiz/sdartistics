@@ -215,6 +215,9 @@ class WMWTest {
   late double u1;
   late double u2;
   get u => u1 < u2 ? u1 : u2;
+  double get z => (u - n1 * n2 / 2) / sqrt(n1 * n2 * (n1 + n2 + 1) / 12);
+  // double get p => 2 * normal_cdf(-abs(z));
+  // TODO: Uncomment when the normal_cdf is implemented. This requires ERF implementation from dart_numerics.
 
   WMWTest(List<double> sample1, List<double> sample2) {
     n1 = sample1.length;
@@ -267,8 +270,6 @@ class WMWTest {
     u1 = r1 - (n1 * (n1 + 1)) / 2;
     u2 = r2 - (n2 * (n2 + 1)) / 2;
   }
-
-  // TODO: Calculate p-value.
 }
 
 class WilcoxonSignedRanksTest {}
